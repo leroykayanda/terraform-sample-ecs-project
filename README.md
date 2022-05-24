@@ -33,7 +33,9 @@ Steps to run:
 3. Initialize terraform, plan and apply
 
     terraform init
+    
     terraform plan
+    
     terraform apply
 
 4. To get the alb dns name, check the outputs
