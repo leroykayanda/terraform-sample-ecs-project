@@ -12,6 +12,7 @@ Steps to run:
 1. clone the repo.
 
     git clone https://github.com/leroykayanda/terraform-sample-ecs-project.git
+    
     cd terraform-sample-ecs-project
 
 2. These variables need to be initialized with the appropriate values in terraform.auto.tfvars
