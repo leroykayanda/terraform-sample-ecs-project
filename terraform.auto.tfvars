@@ -1,0 +1,21 @@
+env                  = "dev"
+region               = "eu-west-1"
+cluster_name         = "foo"
+microservice_name    = "bar"
+fargate_cpu          = 1024
+fargate_mem          = 2048
+container_name       = "web_app"
+container_image      = "nginx:latest"
+desired_count        = 1
+container_port       = 80
+deregistration_delay = 5
+min_capacity         = 1
+max_capacity         = 2
+internal             = false
+waf                  = "no"
+health_check_path    = "/"
+certificate_arn      = ""
+zone_id              = ""
+domain_name          = ""
+sns_topic            = ""
+
