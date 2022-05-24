@@ -1,4 +1,5 @@
 # terraform-sample-ecs-project
+
 This is a sample terraform project used to create an ECS fargate service
 
 I use the [official VPC module](https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/latest) to set up a VPC.
@@ -12,22 +13,21 @@ Steps to run:
 1. clone the repo.
 
     git clone https://github.com/leroykayanda/terraform-sample-ecs-project.git
-    
     cd terraform-sample-ecs-project
 
 2. These variables need to be initialized with the appropriate values in terraform.auto.tfvars
 
-    certificate_arn: 
+    certificate_arn:
     an acm cert for the ALB HTTPS listener
-
-    zone_id: 
-    for the R53 hosted zone where the ALB alias will be created in  
-
+    
+    zone_id:
+    for the R53 hosted zone where the ALB alias will be created in
+    
     domain_name: 
-    alias which will map to ALB DNS name 
-       
+    alias which will map to ALB DNS name
+    
     sns_topic: 
-    the module sets up various alarms. This is the ARN for the SNS topic            
+    the module sets up various alarms. This is the ARN for the SNS topic
 
 3. Initialize terraform, plan and apply
 
@@ -35,3 +35,12 @@ Steps to run:
     terraform plan
     terraform apply
 
+4. To get the alb dns name, check the outputs
+
+    terraform output
+    
+    Note that the ALB only has a HTTPS listener. A HTTP listener which redirects to HTTPS can be added later.
+
+5. After testing, destroy the resources
+
+    terraform destroy --auto-approve
