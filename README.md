@@ -5,7 +5,7 @@ I use the [official VPC module](https://registry.terraform.io/modules/terraform-
 
 I then use a [module I created](https://registry.terraform.io/modules/leroykayanda/ecsModule/aws/latest) to set up an ECS fargate service.
 
-I use a local backend. The resources are created in eu-west-2 (London).
+I use a local backend. The resources are created in eu-west-1 (Ireland).
 
 Steps to run:
 
