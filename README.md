@@ -17,15 +17,17 @@ Steps to run:
 
 2. These variables need to be initialized with the appropriate values in terraform.auto.tfvars
 
-certificate_arn: 
-an acm cert for the ALB HTTPS listener
+    certificate_arn: 
+    an acm cert for the ALB HTTPS listener
 
-zone_id: 
-for the R53 hosted zone where the ALB alias will be created in  
+    zone_id: 
+    for the R53 hosted zone where the ALB alias will be created in  
 
-domain_name: alias which will map to ALB DNS name 
+    domain_name: 
+    alias which will map to ALB DNS name 
        
-sns_topic: the module sets up various alarms. This is the ARN for the SNS topic            
+    sns_topic: 
+    the module sets up various alarms. This is the ARN for the SNS topic            
 
 3. Initialize terraform, plan and apply
 
